@@ -5,7 +5,7 @@ import { useNovuThemeProvider, useSubscriberPreference } from '@novu/notificatio
 import { accordionStyles, Text, TextBlock } from './styles';
 import { ChannelPreference } from './ChannelPreference';
 import { getChannel } from './channels';
-import image from '@novu/notification-center/src/images/no-settings.png';
+// import image from '@novu/notification-center/src/images/no-settings.png';
 
 export function SubscriberPreference() {
   const { theme, common } = useNovuThemeProvider();
@@ -19,9 +19,7 @@ export function SubscriberPreference() {
   return (
     <>
       {!loading && preferences?.length === 0 && (
-        <ImageContainer>
-          <Logo src={image} alt="logo" />
-        </ImageContainer>
+        <ImageContainer>{/* <Logo src={image} alt="logo" /> */}</ImageContainer>
       )}
       <AccordionContainer>
         <Accordion iconPosition="right" styles={accordionStyles(baseTheme, common.fontFamily)}>

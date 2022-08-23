@@ -2,9 +2,9 @@ import React from 'react';
 import { ActionIcon } from '@mantine/core';
 import { ArrowLeft } from '../../../../../shared/icons';
 import styled from 'styled-components';
-import { useNovuThemeProvider } from '../../../../../hooks';
+import { useNovuThemeProvider } from '@novu/notification-center/src/hooks';
 import { ScreensEnum } from '../Layout';
-import { useTranslations } from '../../../../../hooks/use-translations';
+import { useTranslations } from '@novu/notification-center/src/hooks/use-translations';
 
 export function UserPreferenceHeader({ setScreen }: { setScreen: (screen: ScreensEnum) => void }) {
   const { theme } = useNovuThemeProvider();
