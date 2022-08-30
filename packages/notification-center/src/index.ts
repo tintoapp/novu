@@ -25,6 +25,10 @@ export { INovuPopoverTheme } from './store/novu-theme.context';
 
 export { SubscriberPreference } from './components/notification-center/components/user-preference/SubscriberPreference';
 
+import { IStoreQuery } from '@novu/client';
+export { IUserPreferenceSettings } from '@novu/client';
+export type { IStoreQuery };
+
 export interface IAuthContext {
   applyToken: (token: string | null) => void;
   setUser: (profile: ISubscriberJwt) => void;
@@ -108,14 +112,4 @@ export declare type ColorScheme = 'light' | 'dark';
 export interface ITab {
   name: string;
   storeId: string;
-}
-
-export interface IStoreQuery {
-  feedIdentifier?: string | string[];
-  seen?: boolean;
-}
-
-export interface IUserPreferenceSettings {
-  template: { _id: string; name: string; critical: boolean };
-  preference: { enabled: boolean; channels: IPreferenceChannels };
 }
